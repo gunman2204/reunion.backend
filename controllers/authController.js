@@ -1,7 +1,7 @@
 const User = require('../models/User')
 const Task = require('../models/Task')
 const jwt = require('jsonwebtoken');
-const dotenv = require('dotenv');
+// const dotenv = require('dotenv');
 const bcrypt = require('bcryptjs');
 
 dotenv.config();

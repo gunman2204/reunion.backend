@@ -1,10 +1,10 @@
 const User = require('../models/User')
 const Task = require('../models/Task')
 const jwt = require('jsonwebtoken');
-// const dotenv = require('dotenv');
+// const dotenv = require('.env');
 const bcrypt = require('bcryptjs');
 
-dotenv.config();
+// dotenv.config();
 const generateToken = (id) => {
     return jwt.sign({ id }, process.env.JWT_secret, {
         expiresIn: '30d',

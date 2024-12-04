@@ -10,12 +10,20 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  // origin: 'https://674f4ad56f06940f2b890831--warm-kringle-268da3.netlify.app', // Allow requests from this origin
+  // origin: 'https://inverntory-insight.vercel.app', 
   origin:'*',
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true, // Allow cookies or HTTP authentication
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'], // Allow all HTTP methods
+  allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
+  credentials: true, // Allow cookies to be sent
 }));
+
+// app.use(cors({
+//   // origin: 'https://674f4ad56f06940f2b890831--warm-kringle-268da3.netlify.app', // Allow requests from this origin
+//   origin:'*',
+//   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+//   allowedHeaders: ['Content-Type', 'Authorization'],
+//   credentials: true, // Allow cookies or HTTP authentication
+// }));
 app.options('*', cors());
 
 

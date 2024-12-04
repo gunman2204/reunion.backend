@@ -10,7 +10,10 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: 'https://674f4ad56f06940f2b890831--warm-kringle-268da3.netlify.app' // Allow requests from this origin
+  origin: 'https://674f4ad56f06940f2b890831--warm-kringle-268da3.netlify.app', // Allow requests from this origin
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true, // Allow cookies or HTTP authentication
 }));
 
 app.use(express.json());

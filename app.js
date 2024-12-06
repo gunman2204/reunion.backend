@@ -13,7 +13,7 @@ app.use(cors({
   // origin: 'https://inverntory-insight.vercel.app', 
   origin:'*',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'], // Allow all HTTP methods
-  allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
+  // allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
   credentials: true, // Allow cookies to be sent
 }));
 
